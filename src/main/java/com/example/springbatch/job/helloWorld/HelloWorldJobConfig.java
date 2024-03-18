@@ -1,4 +1,4 @@
-package com.example.springbatch.job;
+package com.example.springbatch.job.helloWorld;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.Job;
@@ -16,6 +16,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * --spring.batch.job.names=helloWorldJob
+ */
 @Configuration
 @RequiredArgsConstructor
 public class HelloWorldJobConfig {

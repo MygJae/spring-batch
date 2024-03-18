@@ -1,7 +1,7 @@
 spring:
   batch:
     job:
-      names: ${job.name:NONE}
+      names: ${job.name:NONE} #edit configuration -> CLI -> --spring.batch.job.names=helloWorldJob 설정 해줘야 한다.
     jdbc:
       initialize-schema: ALWAYS
   datasource:
