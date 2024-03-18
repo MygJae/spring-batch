@@ -1,4 +1,7 @@
 spring:
+  output:
+    ansi:
+      enabled: ALWAYS
   batch:
     job:
       names: ${job.name:NONE} #edit configuration -> CLI -> --spring.batch.job.names=helloWorldJob 설정 해줘야 한다.
@@ -13,3 +16,4 @@ spring:
     show-sql: true
     hibernate.ddl-auto: update
     properties.hibernate.format_sql: true
+
