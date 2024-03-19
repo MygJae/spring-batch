@@ -1,4 +1,4 @@
-package com.example.springbatch.job.DbDataReadWrite;
+package com.example.springbatch.job.dbDataReadWrite;
 
 import com.example.springbatch.job.core.domain.accounts.Accounts;
 import com.example.springbatch.job.core.domain.accounts.AccountsRepository;
@@ -26,7 +26,6 @@ import org.springframework.data.domain.Sort;
 
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 
 /**
  * desc: 주문 테이블 -> 정산 테이블 데이터 이관
@@ -58,9 +57,9 @@ public class TrMigrationConfig {
 
     @JobScope
     @Bean
-    public Step trMigrationStep(RepositoryItemReader<Orders> trOrdersReader,
+    public Step trMigrationStep(ItemReader<Orders> trOrdersReader,
                                 ItemProcessor<Orders, Accounts> trOrderProcessor,
-                                RepositoryItemWriter<Accounts> trOrdersWriter) {
+                                ItemWriter<Accounts> trOrdersWriter) {
         return stepBuilderFactory.get("trMigrationStep")
                 .<Orders, Accounts>chunk(5)
                 .reader(trOrdersReader)
