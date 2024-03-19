@@ -22,7 +22,8 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Arrays;
 
 /**
- * --spring.batch.job.names=validatedParamJob -fileName=test.csv
+ * desc: 파일 이름 파라미터 전달 그리고 검증
+ * run: --spring.batch.job.names=validatedParamJob -fileName=test.csv
  */
 @Configuration
 @RequiredArgsConstructor

@@ -17,7 +17,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * --spring.batch.job.names=helloWorldJob
+ * desc: tasklet을 활용하여 Hello World를 출력
+ * run: --spring.batch.job.names=helloWorldJob
  */
 @Configuration
 @RequiredArgsConstructor

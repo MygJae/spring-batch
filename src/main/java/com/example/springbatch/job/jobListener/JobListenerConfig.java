@@ -17,7 +17,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * --spring.batch.job.names=jobListenerJob
+ * desc: 리스너를 활용하여 job 실행 전/후 로그 작업
+ * run: --spring.batch.job.names=jobListenerJob
  */
 @Configuration
 @RequiredArgsConstructor
