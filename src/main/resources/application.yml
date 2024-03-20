@@ -1,10 +1,17 @@
 spring:
-  output:
-    ansi:
-      enabled: ALWAYS
+  profiles:
+    active: local
+
+---
+spring:
+  output.ansi.enabled: ALWAYS
+  config:
+    activate:
+      on-profile: local
   batch:
     job:
       names: ${job.name:NONE} #edit configuration -> CLI -> --spring.batch.job.names=helloWorldJob 설정 해줘야 한다.
+      enabled: false # CLI 존재해도 실행하지 않음
     jdbc:
       initialize-schema: ALWAYS
   datasource:
@@ -16,4 +23,12 @@ spring:
     show-sql: true
     hibernate.ddl-auto: update
     properties.hibernate.format_sql: true
+---
+
+spring:
+  config:
+    activate:
+      on-profile: test
+  jpa:
+    database: h2
 
