@@ -17,9 +17,9 @@
 - 디비버 MySql 접속
   - Test connection 할 때 Public key retrieval is not allowed 에러 발생
   - -> MySql8.0부터 보안 이슈로 useSSL 옵션에 대한 추가적인 설정이 필요
-  - -> Driver properties탭 -> Public key retrieval is not allowed를 false에서 true
+  - -> Driver properties탭 -> allowPublicKeyRetrieval를 false에서 true
 - MySql 의존성 주입 실패
-  - runtimeOnly 'com.mysql:mysql-connector-j' -> implementation 'mysql:mysql-connector-java'
+  - runtimeOnly 'com.mysql:mysql-connector-j' -> implementation 'mysql:mysql-connector-java:8.0.29'
 
 ### 스프링 배치 사용 이유
 - 사용 이유
